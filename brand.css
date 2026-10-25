@@ -1,0 +1,12 @@
+/* MESCHOOL: blue + red with neutral surfaces. */
+:root{--p-primary:#2854d8;--p-accent:#d93440;--p-secondary:#eaf0ff;--p-page:#ffffff;--p-ink:#20232b;--p-surface:#f3f4f6;--p-muted:#626975;--p-on-primary:#ffffff;--p-on-accent:#ffffff;--p-on-secondary:#20232b;--p-primary-hover:#234abe;--p-tint:#eaf0ff;--p-line:#e0e3e8}
+.hero-object{display:none!important}
+.hero-photo{background:var(--p-accent)}
+.photo-note{background:var(--p-page);border:1px solid var(--p-line)}
+h2 em{color:var(--p-primary)}
+.trial h2 em{color:var(--p-on-primary)}
+.program:nth-child(1) .pill{background:var(--p-tint);color:var(--p-ink)}
+.program:nth-child(2) .pill,.teacher-list article:nth-child(2) .teacher-initial{background:var(--p-accent);color:var(--p-on-accent)}
+.trial .booking .pill{background:var(--p-accent);color:var(--p-on-accent)}
+.price-card.featured{background:var(--p-secondary);color:var(--p-on-secondary)}
+.price-card.featured .price-heading,.price-card.featured .price-unit{color:var(--p-on-secondary)}
