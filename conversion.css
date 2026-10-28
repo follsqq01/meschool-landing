@@ -1,0 +1,13 @@
+/* Clear trial-class calls to action and a more readable teacher roster. */
+.section-cta{margin-top:32px;width:max-content;max-width:100%;font-size:15px;min-height:58px;padding:17px 26px}
+.approach-cta{margin-top:28px}
+.hero-copy>.button{font-size:16px;min-height:62px;padding:18px 26px}
+.booking .button{font-size:16px;min-height:60px;padding-inline:23px}
+.teacher-list article{padding:32px 28px;grid-template-columns:64px minmax(250px,1fr) 210px 180px;gap:24px}
+.teacher-initial{width:56px;height:56px}
+.teacher-list h3{font-size:19px}
+.teacher-list p,.teacher-list article>span{font-size:14px}
+.teacher-list summary{font-size:13px}
+@media(max-width:1000px){.teacher-list article{grid-template-columns:58px minmax(200px,1fr) 175px}.teacher-list details{grid-column:2/-1}}
+@media(max-width:680px){.section-cta{width:100%;font-size:14px;min-height:56px;margin-top:24px}.approach-cta{margin-top:28px}
+.hero-copy>.button{width:100%;font-size:14px;min-height:58px}.booking .button{font-size:14px;min-height:58px}.teacher-list article{grid-template-columns:48px minmax(0,1fr);padding:23px 19px;gap:12px}.teacher-initial{width:44px;height:44px}.teacher-list h3{font-size:16px}.teacher-list p,.teacher-list article>span{font-size:12px}.teacher-list article>span,.teacher-list details{grid-column:2}}
