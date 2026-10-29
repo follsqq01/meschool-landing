@@ -11,3 +11,12 @@
 @media(max-width:1000px){.teacher-list article{grid-template-columns:58px minmax(200px,1fr) 175px}.teacher-list details{grid-column:2/-1}}
 @media(max-width:680px){.section-cta{width:100%;font-size:14px;min-height:56px;margin-top:24px}.approach-cta{margin-top:28px}
 .hero-copy>.button{width:100%;font-size:14px;min-height:58px}.booking .button{font-size:14px;min-height:58px}.teacher-list article{grid-template-columns:48px minmax(0,1fr);padding:23px 19px;gap:12px}.teacher-initial{width:44px;height:44px}.teacher-list h3{font-size:16px}.teacher-list p,.teacher-list article>span{font-size:12px}.teacher-list article>span,.teacher-list details{grid-column:2}}
+
+/* 3D illustration accents */
+.facts>div{display:flex;align-items:center;gap:14px}.facts>div>img{width:44px;height:44px;object-fit:contain;flex:none}.facts>div>div{display:flex;flex-direction:column;gap:3px}
+.program{overflow:hidden}.program h3,.program p{max-width:68%}.program-art{position:absolute;right:18px;top:112px;width:92px;height:92px;object-fit:contain;filter:drop-shadow(0 8px 8px #1826501b);pointer-events:none}
+.reason-art{width:52px;height:52px;object-fit:contain;flex:none;filter:drop-shadow(0 4px 6px #17204012)}.reasons article{align-items:center}.reasons article>div{flex:1}
+
+.contacts{position:relative;overflow:hidden}.contacts>div{position:relative;z-index:1}.contact-graduation{position:absolute;left:46%;bottom:-72px;width:400px;height:330px;object-fit:contain;pointer-events:none;filter:drop-shadow(0 12px 12px #17204012)}
+@media(max-width:1000px) and (min-width:681px){.contact-graduation{left:40%;bottom:-35px;width:290px;height:270px}}
+@media(max-width:680px){.contact-graduation{position:relative;left:auto;bottom:auto;display:block;width:230px;height:190px;margin:12px auto -18px;filter:drop-shadow(0 10px 10px #17204012)}.contacts{padding-bottom:30px}.facts>div{justify-content:flex-start}.facts>div>img{width:40px;height:40px}.facts>div>div{flex:1}.facts span{text-align:left}.program-art{width:86px;height:86px;top:105px;right:17px}.program h3,.program p{max-width:68%}.reason-art{width:46px;height:46px}}
