@@ -65,6 +65,10 @@ body{background:#fff}.hero{isolation:isolate}.hero:before{content:"";position:ab
 /* Consistent circular arrows and the final contacts composition. */
 .button>span,.program-bottom a{width:32px;height:32px;min-width:32px;display:grid;place-items:center;padding:0;border-radius:50%}
 .button>span .arrow-ne,.program-bottom a .arrow-ne{width:20px;height:20px}
+.price-card-arrow{width:46px;height:46px;min-width:46px;display:grid;place-items:center;border-radius:50%;background:#fff;color:#2854d8;box-shadow:0 8px 20px #1720400b;transition:transform .25s ease,background .25s ease,color .25s ease}
+.price-card-arrow .arrow-ne{width:22px;height:22px}
+.price-card-arrow:hover{background:#2854d8;color:#fff;transform:translateY(-2px)}
+.price-card-arrow:focus-visible{outline:3px solid #2854d84d;outline-offset:3px}
 .contacts{display:grid;grid-template-columns:minmax(280px,1fr) minmax(420px,520px) minmax(280px,.85fr);align-items:center;gap:24px;min-height:365px;padding:44px 48px;overflow:hidden}
 .contacts>div:first-child{grid-column:1;grid-row:1}
 .contacts .contact-right{grid-column:3;grid-row:1;margin:0;justify-self:start}
@@ -75,6 +79,8 @@ body{background:#fff}.hero{isolation:isolate}.hero:before{content:"";position:ab
  .contact-phone{font-size:22px}
 }
 @media(max-width:680px){
+ .price-card-arrow{width:42px;height:42px;min-width:42px}
+ .price-card-arrow .arrow-ne{width:20px;height:20px}
  .contacts{display:block;width:calc(100% - 12px);height:650px;min-height:650px;padding:38px 28px;overflow:hidden}
  .contacts .contact-right{margin-top:62px}
  .contacts .contact-graduation{position:absolute;inset:auto -56px -88px auto;width:440px;max-width:none;height:auto;margin:0;transform:none}
