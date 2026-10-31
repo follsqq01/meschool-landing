@@ -1,5 +1,5 @@
 /* Final editorial layout, light and motion. */
-body{background:#fff}.hero{isolation:isolate}.hero:before{content:"";position:absolute;z-index:-1;inset:-45px -35px 30px 28%;background:radial-gradient(ellipse at 72% 38%,#e7edffad,transparent 62%);pointer-events:none}
+body{background:#fff}.hero{isolation:isolate}.hero:before{content:"";position:absolute;z-index:-1;inset:-45px -35px 30px 28%;background:none;pointer-events:none}
 .hero-photo{box-shadow:0 25px 65px -30px #7e15324a}.hero-photo>img:not(.hero-object){object-position:center 40%;box-shadow:0 12px 35px #12235317}.photo-note{box-shadow:0 10px 35px #17204015}.hero h1 em{background:linear-gradient(115deg,#2854d8 25%,#5777f1 90%);background-clip:text;-webkit-background-clip:text;color:transparent}
 .button{position:relative;isolation:isolate;overflow:hidden;box-shadow:0 7px 18px -12px #2854d89c;transition:background .25s,box-shadow .25s,transform .25s}.button:before{content:"";position:absolute;z-index:-1;inset:0;transform:translateX(-110%) skewX(-20deg);background:linear-gradient(90deg,transparent,#ffffff25,transparent);transition:transform .65s}.button:hover:before{transform:translateX(110%) skewX(-20deg)}.button:hover{box-shadow:0 12px 22px -12px #2854d899}.button span{flex:none;transition:transform .3s}.button:hover span{transform:rotate(45deg)}
 .facts{background:linear-gradient(120deg,#f7f8fb,#f1f3f8);box-shadow:inset 0 1px 0 #fff}.facts>div>img{width:49px;height:49px}.facts strong{font-size:16px}.facts span{font-size:10px}
@@ -85,3 +85,72 @@ body{background:#fff}.hero{isolation:isolate}.hero:before{content:"";position:ab
  .contacts .contact-right{margin-top:62px}
  .contacts .contact-graduation{position:absolute;inset:auto -56px -88px auto;width:440px;max-width:none;height:auto;margin:0;transform:none}
 }
+
+/* Shared section edges and a structured footer. */
+.approach{width:min(1240px,calc(100% - 96px));margin-inline:auto;padding:60px 48px}
+.approach>.wrap{width:100%;max-width:none}
+.contacts{width:min(1240px,calc(100% - 96px));max-width:1240px;grid-template-columns:minmax(0,1fr) minmax(240px,.9fr) minmax(0,.9fr);gap:24px}
+.contacts .contact-graduation{width:400px;bottom:-80px}
+.contacts .contact-phone{font-size:clamp(20px,2vw,27px);white-space:nowrap}
+.site-footer{display:block;padding:48px 0 24px;border-top:1px solid var(--p-line);margin-top:40px;color:var(--p-ink)}
+.footer-main{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;padding-bottom:36px}
+.site-footer .logo img{width:150px}
+.site-footer .footer-brand p{display:block;margin-top:18px;font-size:13px;line-height:1.65;color:var(--p-muted)}
+.footer-label{display:block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--p-muted);margin-bottom:18px}
+.footer-nav{display:flex;flex-direction:column;align-items:flex-start;gap:10px;font-size:14px;line-height:1.5}
+.footer-nav .footer-label{margin-bottom:6px}
+.footer-contact{font-size:13px;line-height:1.65}
+.footer-phone{display:inline-block;font-size:20px;font-weight:600;letter-spacing:-.5px;margin-bottom:10px}
+.footer-contact address{font-style:normal;color:var(--p-muted)}
+.footer-top{display:inline-block;margin-top:18px;font-size:12px;color:var(--p-primary)}
+.site-footer a:hover{color:var(--p-primary)}
+.footer-bottom{display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding-top:22px;border-top:1px solid var(--p-line);font-size:12px;color:var(--p-muted)}
+.site-footer .legal-footer{display:flex;flex-wrap:wrap;flex-basis:auto;gap:12px 24px;font-size:12px;line-height:1.5}
+.site-footer .legal-footer a{color:var(--p-muted)}
+.site-footer .legal-footer a:hover{text-decoration:underline;color:var(--p-primary)}
+@media(max-width:1000px){
+ .approach,.contacts{width:calc(100% - 48px)}
+ .approach{padding:40px 30px}
+ .contacts{grid-template-columns:minmax(0,1fr) minmax(0,1fr);padding:36px 30px;min-height:340px}
+ .contacts .contact-right{grid-column:2;justify-self:end;align-self:start;padding-top:12px}
+ .contacts .contact-graduation{width:310px;left:55%;bottom:-85px}
+ .footer-main{gap:30px;grid-template-columns:1fr 1fr 1.15fr}
+ .footer-phone{font-size:18px}
+}
+@media(max-width:680px){
+ .approach,.contacts{width:calc(100% - 40px)}
+ .approach{padding:32px 22px}
+ .contacts{display:block;height:600px;min-height:0;padding:30px 23px}
+ .contacts .contact-right{padding-top:0;margin-top:36px}
+ .contacts .contact-graduation{inset:auto -52px -85px auto;width:390px;transform:none}
+ .site-footer{margin-top:32px;padding:32px 0 24px}
+ .footer-main{grid-template-columns:1fr 1fr;gap:30px 24px;padding-bottom:28px}
+ .footer-brand{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:20px}
+ .site-footer .logo img{width:132px}
+ .site-footer .footer-brand p{margin:0;font-size:12px;max-width:150px}
+ .footer-label{font-size:10px;margin-bottom:14px}
+ .footer-nav{font-size:12px;gap:12px}
+ .footer-contact{font-size:12px}
+ .footer-phone{font-size:15px;letter-spacing:-.3px;white-space:nowrap}
+ .footer-bottom{align-items:flex-start;flex-direction:column;gap:16px;font-size:11px;padding-top:20px}
+ .site-footer .legal-footer{flex-direction:column;gap:10px;font-size:11px}
+}
+
+/* Compact desktop contact panel. */
+@media(min-width:1001px){.contacts{min-height:295px;padding-block:32px}.contacts h2{font-size:36px}.contacts address{margin:16px 0 10px}.contacts .contact-graduation{bottom:-72px}}
+@media(min-width:681px) and (max-width:1000px){.contacts{min-height:280px;padding-block:26px}.contacts h2{font-size:32px}.contacts .contact-graduation{width:275px;bottom:-85px}}
+
+@media(min-width:1001px){.header-phone{font-size:17px;font-weight:600;padding:11px 20px;line-height:1.4;white-space:nowrap}}
+
+/* Balanced desktop header: brand left, navigation and phone grouped right. */
+@media(min-width:1001px){
+ .header{justify-content:flex-start;gap:42px}
+ .header .logo img{width:128px}
+ .header nav{margin-left:auto;gap:28px;font-size:14px;font-weight:500}
+ .header-phone{border:0;border-radius:0;background:transparent;padding:8px 0;font-size:17px;font-weight:500;line-height:1.4;white-space:nowrap}
+}
+@media(min-width:1001px) and (max-width:1150px){.header{gap:28px}.header nav{gap:20px}}
+
+@media(min-width:1001px){.header{display:grid;grid-template-columns:1fr auto 1fr;gap:28px}.header .logo{justify-self:start}.header nav{margin-left:0;justify-self:center}.header-phone{justify-self:end}}
+
+.hero::before{content:none}

@@ -10,3 +10,9 @@ h2 em{color:var(--p-primary)}
 .trial .booking .pill{background:var(--p-accent);color:var(--p-on-accent)}
 .price-card.featured{background:var(--p-secondary);color:var(--p-on-secondary)}
 .price-card.featured .price-heading,.price-card.featured .price-unit{color:var(--p-on-secondary)}
+
+/* Original vector brand mark, with reserved space to prevent layout shifts. */
+.logo{display:inline-flex;align-items:center;flex-shrink:0;line-height:0;letter-spacing:normal}
+.logo img{display:block;width:154px;height:auto}
+footer .logo img{width:140px}
+@media(max-width:680px){.header .logo img{width:132px}footer .logo img{width:132px}}

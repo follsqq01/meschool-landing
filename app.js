@@ -68,5 +68,3 @@ for (const details of document.querySelectorAll('.teacher-list details')) {
   };
  });
 }
-const legal=$('#legal-dialog');document.querySelectorAll('[data-legal]').forEach(b=>b.addEventListener('click',()=>{$('#legal-title').textContent=b.dataset.legal==='privacy'?'Политика конфиденциальности':'Согласие на обработку данных';legal.showModal()}));legal.querySelector('.close').addEventListener('click',()=>legal.close());legal.addEventListener('click',e=>{if(e.target===legal){const r=legal.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)legal.close()}});
-$('#lead-form').addEventListener('submit',e=>{e.preventDefault();$('#form-status').textContent='Форма заполнена. Это демонстрация: заявка не отправлена, данные не сохраняются.'});

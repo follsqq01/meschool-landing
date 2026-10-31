@@ -1,0 +1,31 @@
+/* Shared type scale. Keep sizes and weights tied to content roles. */
+:root{--type-display:76px;--type-section:44px;--type-card:28px;--type-title:20px;--type-body:14px;--type-small:12px;--type-price:56px}
+body{font-family:'Golos Text',Arial,sans-serif;font-size:var(--type-body);line-height:1.65}
+body .hero h1,body .hero h1 em{font-size:var(--type-display);font-weight:600;line-height:1.04;letter-spacing:-.045em}
+body h2,body h2 em,body .trial h2,body .contacts h2,body .school-life .section-top h2{font-size:var(--type-section);font-weight:500;line-height:1.12;letter-spacing:-.035em}
+body .program h3,body .price-card h3,body .booking h3{font-family:inherit;font-size:var(--type-card);font-weight:600;line-height:1.2;letter-spacing:-.025em}
+body .reasons h3,body .teacher-list h3,body .photo-note span{font-family:inherit;font-size:var(--type-title);font-weight:500;line-height:1.35;letter-spacing:-.02em}
+body .lead,body .section-top>p,body .program p,body .approach-intro,body .reasons p,body .individual-description,body .faq details p,body .booking>p,body .contacts address,body .contact-right p,body .footer-contact address{font-size:var(--type-body);font-weight:400;line-height:1.65;letter-spacing:normal}
+body .header nav,body .button,body .hero-copy>.button,body .booking .button,body .section-cta,body .text-link,body .footer-nav,body .faq summary,body .tabs button,body .duration button,body .teacher-list summary{font-size:var(--type-body);font-weight:500;line-height:1.45;letter-spacing:normal}
+body .header .header-phone,body .contacts .contact-phone,body .site-footer .footer-phone{font-size:var(--type-title);font-weight:500;line-height:1.4;letter-spacing:-.02em}
+body .facts strong{font-size:var(--type-body);font-weight:600;line-height:1.45;letter-spacing:normal}
+body .micro,body .photo-note small,body .facts span,body .program-top>span:first-child,body .pill,body .program-bottom,body .program-bottom span,body .price-heading,body .price-heading>span,body .price-unit,body .price-footnote,body .choice-label,body .teacher-list p,body .teacher-list article>span,body .booking .booking-note,body .booking label,body .booking .consent,body .start-steps span,body .site-footer .footer-brand p,body .site-footer .footer-contact,body .footer-bottom,body .site-footer .legal-footer,body .footer-top,body #form-status{font-size:var(--type-small);font-weight:400;line-height:1.55;letter-spacing:normal}
+body .start-steps strong,body .footer-label{font-size:var(--type-small);font-weight:500;line-height:1.55;letter-spacing:normal}
+body .booking input:not([type=checkbox]),body .booking select{font-size:16px;font-weight:400;line-height:1.5}
+body .price{font-size:var(--type-price);font-weight:500;line-height:1.1;letter-spacing:-.04em}
+body .price small,body .price-unit-inline{font-size:var(--type-card);font-weight:500;letter-spacing:normal}
+/* Space follows the larger, readable body copy. */
+body .program{min-height:390px}
+body .program h3{max-width:73%}
+body .contacts h2{font-size:var(--type-card);font-weight:600;line-height:1.2;letter-spacing:-.025em}
+body .contacts .contact-phone{white-space:nowrap}
+@media(max-width:1000px){:root{--type-display:64px;--type-section:38px;--type-card:26px;--type-title:18px}body .teacher-list h3{font-size:var(--type-title)}}
+@media(max-width:680px){:root{--type-display:clamp(40px,11.8vw,52px);--type-section:34px;--type-card:26px;--type-title:18px;--type-price:48px}body .program{min-height:340px}body .hero-copy>.button,body .booking .button{font-size:var(--type-body)}body .site-footer .footer-phone{font-size:var(--type-body);font-weight:500}body .program h3{max-width:72%}}
+
+body .price-card .tabs button{font-size:var(--type-body);font-weight:500}
+body .exam p,body .trial-copy>p{font-size:var(--type-body);font-weight:400;line-height:1.65}
+body .price small,body .price-unit-inline{font-weight:600}
+body .contacts h2 em{font-size:inherit;font-weight:inherit;line-height:inherit;letter-spacing:inherit}
+
+body .price-card .tabs{width:100%;max-width:100%;flex-wrap:wrap}
+body .price-card .tabs button{padding-inline:12px}
