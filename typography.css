@@ -43,3 +43,31 @@ body .site-footer .footer-site .button:hover{color:#fff}
  body .hero-photo .photo-note span{font-size:16px;line-height:1.3}
  body .hero-photo .photo-note small{display:block;margin-top:3px;font-size:11px;line-height:1.4}
 }
+
+/* Pricing uses four sizes: title, amount, body and supporting copy. */
+body .price-card{--price-title:var(--type-card);--price-caption:14px}
+body .price-card h3{font-size:var(--price-title)}
+body .price-card .price,body .price-card .price small{font-weight:600}
+body .price-card .price small{font-size:var(--price-title);line-height:1.2}
+body .price-card li,body .price-card .individual-description{font-size:var(--type-body);font-weight:400;line-height:1.55}
+body .price-card .price-heading,body .price-card .price-heading>span,
+body .price-card .choice-label,body .price-card .price-unit,
+body .price-card .price-footnote{font-size:var(--price-caption);font-weight:400;line-height:1.55;letter-spacing:normal}
+body .price-card .price-footnote{max-width:none}
+body .price-card.featured ul{max-width:none}
+body .price-card.featured .price-footnote{max-width:none;padding-right:130px;min-height:125px}
+body .price-card .price-goal{width:150px;height:150px;right:-10px;bottom:-10px}
+@media(max-width:1000px){
+ body .price-card.featured .price-footnote{padding-right:100px;min-height:105px}
+ body .price-card .price-goal{width:120px;height:120px}
+}
+@media(max-width:680px){body .price-card{--price-title:24px}}
+
+/* Keep complete word groups inside narrow columns. */
+body .teacher-list details p{overflow-wrap:anywhere}
+@media(min-width:681px) and (max-width:1000px){
+ body .program h3{max-width:100%;margin-top:90px}
+}
+@media(max-width:380px){
+ body .program h3{max-width:100%;margin-top:90px}
+}

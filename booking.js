@@ -21,7 +21,7 @@
   if (pending || completed) return;
   phone.setCustomValidity('');
   const normalized = phoneValue(phone.value);
-  if (!normalized) phone.setCustomValidity('Укажите номер телефона с кодом страны, например +7 999 123-45-67.');
+  if (!normalized) phone.setCustomValidity('Укажите номер телефона с кодом страны, например +7 999 123-45-67.');
   if (!form.reportValidity()) return;
   const firstName = form.elements.namedItem('firstName').value.trim();
   if (!firstName) {
@@ -30,7 +30,7 @@
    return;
   }
   if (!form.elements.namedItem('privacy').checked || !form.elements.namedItem('processing').checked) {
-   status.textContent = 'Ознакомьтесь с политикой и подтвердите согласие на обработку данных.';
+   status.textContent = 'Ознакомьтесь с политикой и подтвердите согласие на обработку данных.';
    return;
   }
   requestId ||= globalThis.crypto?.randomUUID?.() || Date.now().toString(36) + Math.random().toString(36).slice(2);
@@ -75,17 +75,17 @@
    });
    const result = await response.json();
    if (!response.ok || result?.Error) {
-    status.textContent = 'Не удалось отправить заявку. Ваши данные остались в форме. Попробуйте позже или позвоните: +7 (966) 324-14-99.';
+    status.textContent = 'Не удалось отправить заявку. Ваши данные остались в форме. Попробуйте позже или позвоните: +7 (966) 324-14-99.';
     return;
    }
    if (!(Number.isSafeInteger(Number(result?.Id)) && Number(result.Id) > 0)) throw new Error('Unconfirmed CRM response');
    completed = true;
    form.reset();
-   status.textContent = 'Спасибо! Заявка отправлена. Администратор свяжется с вами.';
+   status.textContent = 'Спасибо! Заявка отправлена. Администратор свяжется с вами.';
    button.textContent = 'Заявка отправлена';
   } catch {
    // A lost response may follow a successful write. Do not automatically retry.
-   status.textContent = 'Не удалось подтвердить отправку. Заявка могла поступить — не отправляйте её повторно сразу. Позвоните нам: +7 (966) 324-14-99.';
+   status.textContent = 'Не удалось подтвердить отправку. Заявка могла поступить — не отправляйте её повторно сразу. Позвоните нам: +7 (966) 324-14-99.';
   } finally {
    clearTimeout(timeout);
    pending = false;
