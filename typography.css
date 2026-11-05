@@ -71,3 +71,7 @@ body .teacher-list details p{overflow-wrap:anywhere}
 @media(max-width:380px){
  body .program h3{max-width:100%;margin-top:90px}
 }
+
+body .price-card{min-width:0}
+body .price-card .duration{flex-wrap:wrap}
+@media(max-width:680px){body .price-grid{grid-template-columns:minmax(0,1fr)}}
