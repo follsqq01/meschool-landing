@@ -36,3 +36,10 @@ body .price-card ul,body .teacher-list details p,body .exam summary,body .menu{f
 body .site-footer .footer-site .button{min-height:48px;padding:14px 22px;max-width:100%;color:#fff;gap:16px}
 body .site-footer .footer-site .button:hover{color:#fff}
 @media(max-width:680px){.footer-site .button{width:100%;justify-content:space-between}}
+
+/* Compact photo caption on phones so the class remains visible. */
+@media(max-width:680px){
+ body .hero-photo .photo-note{padding:10px 12px;border-radius:10px;max-width:75%}
+ body .hero-photo .photo-note span{font-size:16px;line-height:1.3}
+ body .hero-photo .photo-note small{display:block;margin-top:3px;font-size:11px;line-height:1.4}
+}
