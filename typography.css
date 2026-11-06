@@ -95,4 +95,10 @@ body .button{text-align:left;justify-content:space-between}
 .teacher-photo-portrait img[src="assets/teacher-wila.jpg"]{object-position:center top}
 
 /* Keep arrow discs circular even when button labels wrap. */
-body .button>span{width:32px;min-width:32px;max-width:32px;height:32px;min-height:32px;max-height:32px;flex:0 0 32px;aspect-ratio:1;display:grid;place-items:center}
+body .button>span,.contact-icon{width:32px;min-width:32px;max-width:32px;height:32px;min-height:32px;max-height:32px;flex:0 0 32px;aspect-ratio:1;display:grid;place-items:center}
+
+/* Footer icons reuse the existing 32px button discs. */
+.contact-icon{border-radius:50%;background:var(--p-surface);color:var(--p-ink)}
+.contact-icon svg{display:block;width:20px;height:20px}
+body .site-footer .footer-phone,.footer-contact address{display:flex;align-items:center;gap:12px}
+.footer-contact address>span:last-child{min-width:0}
