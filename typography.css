@@ -76,35 +76,19 @@ body .price-card{min-width:0}
 body .price-card .duration{flex-wrap:wrap}
 @media(max-width:680px){body .price-grid{grid-template-columns:minmax(0,1fr)}}
 
-/* Mobile alignment; approach, trial and contact panels retain their layout. */
+/* Center only mobile section headings and introductory subtitles. */
 @media(max-width:680px){
- .hero,.facts,#programs,.school-life,#prices,.teachers,.faq,.site-footer{text-align:center}
- .hero .lead,.hero .micro{margin-inline:auto;text-align:center}
- .hero-copy>.button{margin-inline:auto}
- .facts>div{flex-direction:column;justify-content:center}
+ .hero h1,.hero .lead,.section-top,.faq>div:first-child{text-align:center}
+ .hero .lead{margin-inline:auto}
  .section-top{align-items:center}
  .section-top>p{margin-inline:auto}
- body .program h3{max-width:100%;margin:20px auto 17px}
- .program-art{position:static;display:block;margin:20px auto 0}
- .program p,.individual-description,.faq details p{margin-inline:auto}
- .program-top,.program-bottom,.price-heading{justify-content:center;gap:14px;flex-wrap:wrap}
- .program-bottom{margin-top:auto}
- .tabs,.duration{justify-content:center}
- body .price-card.featured .price-footnote{padding-right:0;min-height:0}
- body .price-card .price-goal{position:static;display:block;margin:20px auto -25px}
- .teacher-list article{grid-template-columns:minmax(0,1fr);justify-items:center}
- .teacher-list .teacher-photo{grid-row:auto;align-self:auto}
- .teacher-list details{grid-column:1;width:100%}
- .teacher-list details p{max-width:100%}
- .faq summary,.exam summary{justify-content:center;text-align:center}
- .faq summary span,.exam summary span{flex-shrink:0}
+ /* Keep footer sections on a shared edge without the offset column. */
  .footer-main{grid-template-columns:minmax(0,1fr);gap:28px}
- .footer-brand{grid-column:1;flex-direction:column;gap:16px}
+ .footer-brand{grid-column:1;flex-direction:column;align-items:flex-start;gap:16px}
  .site-footer .footer-brand p{max-width:none}
- .footer-nav{align-items:center}
  .footer-contact{min-width:0}
- .footer-bottom{align-items:center}
- .site-footer .legal-footer{align-items:center}
 }
+/* Button labels stay left, with the arrow on the opposite edge. */
+body .button{text-align:left;justify-content:space-between}
 /* Show the full hairline in Wila's circular portrait. */
 .teacher-photo-portrait img[src="assets/teacher-wila.jpg"]{object-position:center top}
