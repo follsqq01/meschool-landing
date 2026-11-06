@@ -157,3 +157,8 @@ body{background:#fff}.hero{isolation:isolate}.hero:before{content:"";position:ab
 
 /* Full portrait uploads use their own crop, without the older double zoom. */
 .teacher-photo-portrait img{left:0;width:100%;height:100%;transform:none;object-fit:cover;object-position:center 20%}
+
+/* Keep audience and experience together beneath the teacher name. */
+.teacher-list article{grid-template-columns:112px minmax(220px,1fr) 160px}
+@media(min-width:681px) and (max-width:1000px){.teacher-list article{grid-template-columns:100px minmax(0,1fr) 175px}.teacher-list details{grid-column:auto}}
+@media(max-width:680px){.teacher-list article{grid-template-columns:88px minmax(0,1fr)}.teacher-list .teacher-photo{grid-row:1/3}.teacher-list details{grid-column:2}}
