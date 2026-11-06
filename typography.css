@@ -78,8 +78,9 @@ body .price-card .duration{flex-wrap:wrap}
 
 /* Center only mobile section headings and introductory subtitles. */
 @media(max-width:680px){
- .hero h1,.hero .lead,.section-top,.faq>div:first-child{text-align:center}
- .hero .lead{margin-inline:auto}
+ .section-top,.faq>div:first-child{text-align:center}
+ .hero h1,.hero .lead{text-align:left}
+ .hero .lead{margin-inline:0}
  .section-top{align-items:center}
  .section-top>p{margin-inline:auto}
  /* Keep footer sections on a shared edge without the offset column. */
