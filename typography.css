@@ -92,3 +92,6 @@ body .price-card .duration{flex-wrap:wrap}
 body .button{text-align:left;justify-content:space-between}
 /* Show the full hairline in Wila's circular portrait. */
 .teacher-photo-portrait img[src="assets/teacher-wila.jpg"]{object-position:center top}
+
+/* Keep arrow discs circular even when button labels wrap. */
+body .button>span{width:32px;min-width:32px;max-width:32px;height:32px;min-height:32px;max-height:32px;flex:0 0 32px;aspect-ratio:1;display:grid;place-items:center}
