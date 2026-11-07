@@ -25,46 +25,57 @@ for(const card of document.querySelectorAll('.program,.price-card')){
 const teacherPanels = new Map();
 for (const details of document.querySelectorAll('.teacher-list details')) {
  const summary = details.querySelector('summary');
- let animation = null;
+ const card = details.closest('article');
+ let animations = [];
  let expanded = details.open;
- const close = () => {
-  animation?.cancel();
-  animation = null;
-  expanded = false;
-  details.open = false;
+ const setExpanded = next => {
+  if (next === expanded) return;
+  // Capture rendered sizes before cancelling so rapid clicks reverse smoothly.
+  const startDetails = details.getBoundingClientRect().height;
+  const startCard = card.getBoundingClientRect().height;
+  for (const animation of animations) {
+   animation.onfinish = null;
+   animation.cancel();
+  }
+  animations = [];
+  expanded = next;
+  summary.setAttribute('aria-expanded', String(expanded));
   details.style.overflow = '';
-  summary.setAttribute('aria-expanded', 'false');
+  details.open = expanded;
+  const endDetails = details.getBoundingClientRect().height;
+  const endCard = card.getBoundingClientRect().height;
+  if (reduced.matches) return;
+  // Keep the answer rendered until its closing animation has completed.
+  details.open = true;
+  details.style.overflow = 'hidden';
+  const options = { duration: 380, easing: 'cubic-bezier(.22,1,.36,1)', fill: 'both' };
+  const answerMotion = details.animate([
+   { height: startDetails + 'px' }, { height: endDetails + 'px' }
+  ], options);
+  const cardMotion = card.animate([
+   { height: startCard + 'px' }, { height: endCard + 'px' }
+  ], options);
+  animations = [answerMotion, cardMotion];
+  cardMotion.onfinish = () => {
+   details.open = expanded;
+   details.style.overflow = '';
+   for (const animation of animations) {
+    animation.onfinish = null;
+    animation.cancel();
+   }
+   animations = [];
+  };
  };
- teacherPanels.set(details, close);
+ teacherPanels.set(details, () => setExpanded(false));
  summary.setAttribute('aria-expanded', String(expanded));
  summary.addEventListener('click', event => {
   event.preventDefault();
-  const nextExpanded = !expanded;
-  if (nextExpanded) {
+  const next = !expanded;
+  if (next) {
    for (const [other, closeOther] of teacherPanels) {
     if (other !== details) closeOther();
    }
   }
-  const start = details.getBoundingClientRect().height;
-  animation?.cancel();
-  animation = null;
-  expanded = nextExpanded;
-  summary.setAttribute('aria-expanded', String(expanded));
-  if (reduced.matches) {
-   details.open = expanded;
-   details.style.overflow = '';
-   return;
-  }
-  details.open = true;
-  const end = expanded ? details.scrollHeight : summary.getBoundingClientRect().height;
-  details.style.overflow = 'hidden';
-  animation = details.animate([{height: start + 'px'}, {height: end + 'px'}], {
-   duration: 320, easing: 'cubic-bezier(.2,.8,.2,1)'
-  });
-  animation.onfinish = () => {
-   details.open = expanded;
-   details.style.overflow = '';
-   animation = null;
-  };
+  setExpanded(next);
  });
 }
