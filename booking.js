@@ -48,11 +48,11 @@
     requestId,
     interest,
     consent: { processing: true, privacyAcknowledged: true, submittedAt: now,
-     consentVersion: 'consent-2026-10-30', privacyVersion: 'privacy-2026-10-30' }
+     consentVersion: 'consent-2026-11-07', privacyVersion: 'privacy-2026-11-07' }
    }),
    sitePage: location.origin + location.pathname,
-   processingConsent: 'Да; consent-2026-10-30; ' + now,
-   privacyAcknowledged: 'Да; privacy-2026-10-30'
+   processingConsent: 'Да; consent-2026-11-07; ' + now,
+   privacyAcknowledged: 'Да; privacy-2026-11-07'
   };
   // Send only named campaign tags, never all query parameters or the URL fragment.
   const query = new URLSearchParams(location.search);
